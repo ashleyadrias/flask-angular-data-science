@@ -36,18 +36,15 @@ def train():
 def predict():
     # get iris object from request
     X = request.get_json()
-    #X = [[float(X['sepalLength']), float(X['sepalWidth']), float(X['petalLength']), float(X['petalWidth'])]]
-    X = [str(X['description'])]
+    X = [[float(X['sepalLength']), float(X['sepalWidth']), float(X['petalLength']), float(X['petalWidth'])]]
 
     # read model
     clf = joblib.load('model.pkl')
     probabilities = clf.predict_proba(X)
 
-    # return jsonify([{'name': 'Iris-Setosa', 'value': round(probabilities[0, 0] * 100, 2)},
-    #                 {'name': 'Iris-Versicolour', 'value': round(probabilities[0, 1] * 100, 2)},
-    #                 {'name': 'Iris-Virginica', 'value': round(probabilities[0, 2] * 100, 2)}])
-    return jsonify([{'name': 'EAR99', 'value': round(probabilities[0, 0] * 100, 2)},
-                    {'name': 'OTHER', 'value': round(probabilities[0, 1] * 100, 2)}])
+    return jsonify([{'name': 'Iris-Setosa', 'value': round(probabilities[0, 0] * 100, 2)},
+                    {'name': 'Iris-Versicolour', 'value': round(probabilities[0, 1] * 100, 2)},
+                    {'name': 'Iris-Virginica', 'value': round(probabilities[0, 2] * 100, 2)}])
 
 
 if __name__ == '__main__':

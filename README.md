@@ -1,3 +1,9 @@
+# PURPOSE
+
+This fork was adopted and transformed to identify USA Export codes. At the moment, it does binary classification (EAR99 or Other). If the keywords indicate that the part needs special classification, the output will be Other.
+
+THIS IS FOR INFORMATIONAL USE AND NOT INTENDED FOR COMMERICAL USE.
+
 # Data Science Web Application Tutorial
 
 This repository is meant to demonstrate the use of Flask and Angular to build a simple, but state-of-the-art, web application which can be used for POCs.
@@ -8,7 +14,7 @@ Read the corresponding Medium article [here](https://medium.com/@dvelsner/deploy
 First fork or clone this repo:
 
 e.g. `git clone https://github.com/delsner/flask-angular-data-science.git`
- 
+
 
 ## Build images and run containers with docker-compose
 
@@ -24,9 +30,9 @@ Run `docker-compose up` which will start a Flask web application for the backend
 In your browser navigate to: `http://localhost:4200` (or whatever port you defined for the frontend in `docker-compose.yml`).
 
 For testing your backend API I recommend using [Postman](https://www.getpostman.com/).
-  
 
-## Working __without__ docker 
+
+## Working __without__ docker
 
 I highly recommend the use of docker and docker-compose as it is far simpler to get started than to run all of the following manually.
 
@@ -45,7 +51,7 @@ Navigate inside the frontend directory: `cd frontend`
 
 Assure you have [Nodejs](https://nodejs.org/en/), [Yarn](https://yarnpkg.com/en/docs/install) and the [angular-cli](https://cli.angular.io/) installed.
 
-Install npm dependencies: `yarn install --pure-lockfile` 
+Install npm dependencies: `yarn install --pure-lockfile`
 
 Run `yarn start` in frontend root (will watch files and restart dev-server on port `4200` on change).
 All calls made to `/api` will be proxied to backend server (default port for backend `8081`), this can be changed in `proxy.conf.json`.

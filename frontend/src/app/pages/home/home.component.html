@@ -1,7 +1,7 @@
 <div fxLayoutAlign="center center" fxLayout="column">
-    <h1>Iris Model - Example</h1>
+    <h1>ECCN Classifier</h1>
 
-    <div class="home__training">
+    <!-- <div class="home__training">
         <h3>Train Classification Model (Support Vector Machine)</h3>
         <md-card fxLayoutAlign="center center" fxLayout="column">
             <h4>Set Parameter for Model Training</h4>
@@ -30,31 +30,31 @@
                 [units]="'% accuracy'">
             </ngx-charts-linear-gauge>
         </div>
-    </div>
+    </div> -->
 
     <div class="home__prediction"
          fxLayoutAlign="center center"
          fxLayout="column">
-        <h3>Predict Iris classes</h3>
+        <h3>Predict ECCN Classification Code</h3>
 
         <md-card fxLayoutAlign="center center" fxLayout="column">
-            <h4>Define Iris</h4>
+            <h4>Fill in Part Description</h4>
             <div fxLayout="row">
                 <md-input-container>
                     <input mdInput
-                           name="Sepal width"
-                           placeholder="Sepal width"
-                           [(ngModel)]="iris.sepalWidth">
+                           name="Part Description"
+                           placeholder="Part Description"
+                           [(ngModel)]="iris.description">
                 </md-input-container>
-                <md-input-container>
+                <!-- <md-input-container>
                     <input mdInput
                            name="Sepal length"
                            placeholder="Sepal length"
                            [(ngModel)]="iris.sepalLength">
-                </md-input-container>
+                </md-input-container> -->
             </div>
             <div fxLayout="row">
-                <md-input-container>
+                <!-- <md-input-container>
                     <input mdInput
                            name="Petal width"
                            placeholder="Petal width"
@@ -65,10 +65,10 @@
                            name="Petal length"
                            placeholder="Petal length"
                            [(ngModel)]="iris.petalLength">
-                </md-input-container>
+                </md-input-container> -->
             </div>
             <div>
-                <button md-raised-button (click)="predictIris()">Predict iris</button>
+                <button md-raised-button (click)="predictIris()">Predict</button>
             </div>
         </md-card>
 
